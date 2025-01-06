@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Calendar</h1>
+            <div id="month">November</div>
+            <div id="year">2024</div>
+            <button id="btnBack">◀</button>
+            <button id="btnNext">▶</button>
+            <button id="btnLeft">◀</button>
+            <button id="btnRight">▶</button>
+        </div>
+        <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+        <div id="calendar">
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day">
+                <span class="date-number">1</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">2</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">3</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">4</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">5</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">6</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">7</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">8</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">9</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">10</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">11</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">12</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">13</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">14</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">15</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">16</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">17</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">18</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">19</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">20</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">21</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">22</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">23</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">24</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">25</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">26</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">27</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">28</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">29</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">30</span>
+                <div class="event-content"></div>
+            </div>
+            <div class="day">
+                <span class="date-number">31</span>
+                <div class="event-content"></div>
+            </div>
+
+        </div>
+
+        <div id="eventForm" class="event-form" style="display: none;">
+            <h3>Create Event</h3>
+            <label for="eventType">Type of Event:</label>
+            <input type="text" id="eventType" placeholder="e.g., Meeting, Birthday" required>
+
+            <label for="eventTime">From - To:</label>
+            <input type="text" id="eventTime" placeholder="e.g., 10:00 AM - 11:00 AM" required>
+
+            <label for="eventUrgency">Urgency:</label>
+            <select id="eventUrgency">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <button id="saveEventButton">Save Event</button>
+            <button id="closeEventForm">Cancel</button>
+            <button id="deleteEventButton">Delete Event</button> 
+        </div>
+
+        </div>
+
+        <audio id="background-music" autoplay loop>
+            <source src="persona 3 song.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        document.getElementById('background-music').volume = 0.2; 
+    </script>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
