@@ -1,0 +1,157 @@
+body {
+  background-image: url(903.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  height: 100vh; 
+  width: 100vw; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  border-radius: 0; 
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: auto; 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+#month,#year {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+  height: 100%; 
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.day {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s;
+  color: #fff;
+  cursor: pointer; 
+}
+
+.day:hover {
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.current-day {
+  background-color: #4CAF50; 
+  color: white;
+  font-weight: bold;
+}
+
+.event-form {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  color: white;
+  width: 300px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px #000;
+}
+.event-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.event-form input, .event-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.event-form button {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.remove-button {
+  background-color: #ffffff;
+  color: rgb(1, 1, 1);
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #fdfdfd;
+  color: rgb(1, 1, 1);
+}
+
+.remove-button:active {
+  background-color: #ffffff;
+  color: rgb(1, 1, 1);
+}
+
+.remove-button:disabled {
+  background-color: #000000;
+  cursor: not-allowed;
+  color: rgb(255, 255, 255);
+}
+
+.help-button {
+  position: fixed;
+  margin-left: 30%;
+}
+
+.help-button:hover {
+  color: #ffffff;
+}
+
+.today {
+    background-color: #12f38a; 
+    color: #fff;
+    border-radius: 50%;
+}
